@@ -1,19 +1,24 @@
 <template>
     <div>
-        <fa icon='user-shield' v-if="isAdmin" />
-        <fa icon='user-tie' v-if="isProf" />
-        <fa icon='user-graduate' v-if="isEtu" />
+        <fa icon='user-shield' v-if="user.admin" />
+        <fa icon='user-tie' v-if="user.prof" />
+        <fa icon='user-graduate' v-if="user.etu" />
 
     </div>
 </template>
 
 <script>
 export default {
-    props:[
-        'isAdmin',
-        'isProf',
-        'isEtu',
-    ]
+    
+
+    data() {
+        var user = JSON.parse(localStorage.currentUser);
+
+
+        return {
+            user
+        }
+    }
 }
 </script>
 

@@ -9,6 +9,9 @@ import Etudiant from "../views/etudiant/Etudiant.vue"
 import Dashboard from "../views/admin/Dashboard.vue"
 import Classes from "../views/admin/Classes.vue"
 import Modules from "../views/admin/Modules.vue"
+import Seances from "../views/admin/Seances.vue"
+import Notes from "../views/enseignant/Notes.vue"
+import Pfes from "../views/enseignant/Pfes.vue"
 import Admin from "../views/admin/Admin.vue"
 
 import Enseignants from "../views/admin/Enseignants.vue"
@@ -113,18 +116,41 @@ const routes = [
             component:Enseignants,
             name:"enseignants"
           },
+
+          {
+            path:"seances",
+            component:Seances,
+            name:"seances"
+          },
+
+          
         ]
       },
       {
         path:"enseignant",
-        component:Enseignant
+        component:Enseignant,
+        redirect:"/app/enseignant/notes",
+        children:[
+          {
+            path:"notes",
+            component:Notes,
+            name:"notes"
+          },
+          {
+            path:"pfes",
+            component:Pfes,
+            name:"pfes"
+          },
+        ]
+
       },
       {
         path:"etudiant",
         component:Etudiant
       },
-    ]
-  }
+    ],
+
+  },
  
   
 ];

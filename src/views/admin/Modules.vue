@@ -69,6 +69,7 @@ import Avatar from '../../components/Avatar.vue';
   components: { NewAdmission, NewModuleOrEdit, Avatar, },
     mounted:async  function (){
         this.getEtus()
+
     },
     data(){
        
@@ -101,6 +102,8 @@ import Avatar from '../../components/Avatar.vue';
             
             return this.$store.state.admin.classes.classes;
         },
+
+       
 
     
        

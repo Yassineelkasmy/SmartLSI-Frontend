@@ -4,7 +4,7 @@ export default () => {
     let currentUserData = window.localStorage.currentUser;
     let currentUser = currentUserData ? JSON.parse(currentUserData) : '';
     const axiosInstance = axios.create({
-        baseURL: 'http://localhost/api',
+        baseURL: 'http://localhost:8000/api',
         withCredentials: false,
         headers: {
             Accept: "application/json",

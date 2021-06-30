@@ -1,11 +1,7 @@
 import Api from "@/services/api";
 export default {
     state: {
-        infos:{
-    
-          classe:'',
-         
-        },
+        
 
         classes:{
           

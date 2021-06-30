@@ -11,7 +11,7 @@
         <fa icon="search" class="absolute text-lg text-gray-400 left-8 top-8"/>
          
         <div class="absolute right-16 top-6 text-2xl text-gray-500">
-        <avatar :isAdmin="true"/>
+        <avatar/>
         </div>
         <div class="absolute right-5 top-7">
         <d-down-button @click="toggleDropDown"/>
